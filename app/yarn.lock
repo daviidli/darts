@@ -68,6 +68,18 @@
   dependencies:
     debug "^4.1.1"
 
+"@types/node@*":
+  version "13.9.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.9.8.tgz#09976420fc80a7a00bf40680c63815ed8c7616f4"
+  integrity sha512-1WgO8hsyHynlx7nhP1kr0OFzsgKz5XDQL+Lfc3b1Q3qIln/n8cKD4m09NJ0+P1Rq7Zgnc7N0+SsMnoD1rEb0kA==
+
+"@types/serialport@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@types/serialport/-/serialport-8.0.0.tgz#c933cdba5bd9d9576302db03fdbb615fe95d4d2f"
+  integrity sha512-Hz57S0cH1Be94u1UO4kwp+1XwAk0GA5RrL16Gx0wZDLyP8gr+h5qQXFS4OygxjNZcE26cTMnT7s31AlezY+jbw==
+  dependencies:
+    "@types/node" "*"
+
 ansi-regex@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"

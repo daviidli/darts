@@ -16,5 +16,8 @@
   "license": "MIT",
   "dependencies": {
     "serialport": "^8.0.7"
+  },
+  "devDependencies": {
+    "@types/serialport": "^8.0.0"
   }
 }
