@@ -5,8 +5,11 @@
 @import '~@fortawesome/fontawesome-free/css/all.css';
 
 body {
-  position: relative;
-  height: 100vh;
-  font-family: Arial, Helvetica, Helvetica Neue, serif;
-  overflow-y: hidden;
+	position: relative;
+	height: 100vh;
+	font-family: Roboto, Helvetica, Helvetica Neue, serif;
+	overflow-x: hidden;
+	background-color: #212121;
+	color: #fff;
+	margin: 0;
 }

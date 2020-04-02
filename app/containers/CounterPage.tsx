@@ -9,13 +9,13 @@ import {
 } from '../actions/counter';
 import { counterStateType } from '../reducers/types';
 
-function mapStateToProps(state: counterStateType) {
+const mapStateToProps = (state: counterStateType) => {
 	return {
 		counter: state.counter
 	};
-}
+};
 
-function mapDispatchToProps(dispatch: Dispatch) {
+const mapDispatchToProps = (dispatch: Dispatch) => {
 	return bindActionCreators(
 		{
 			increment,
@@ -25,6 +25,6 @@ function mapDispatchToProps(dispatch: Dispatch) {
 		},
 		dispatch
 	);
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);

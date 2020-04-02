@@ -1,0 +1,15 @@
+.home {
+	.title {
+		font-weight: 300;
+		text-align: center;
+		padding: 1.5em;
+	}
+
+	.button {
+		width: 12em;
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.3);
+		}
+	}
+}

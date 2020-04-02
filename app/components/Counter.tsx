@@ -11,7 +11,7 @@ type Props = {
 	counter: number;
 };
 
-export default function Counter(props: Props) {
+const Counter = (props: Props) => {
 	const {
 		increment,
 		incrementIfOdd,
@@ -66,4 +66,6 @@ export default function Counter(props: Props) {
 			</div>
 		</div>
 	);
-}
+};
+
+export default Counter;

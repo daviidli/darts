@@ -3,9 +3,11 @@ import { connectRouter } from 'connected-react-router';
 import { History } from 'history';
 import counter from './counter';
 
-export default function createRootReducer(history: History) {
+const createRootReducer = (history: History<History.PoorMansUnknown>) => {
 	return combineReducers({
 		router: connectRouter(history),
 		counter
 	});
-}
+};
+
+export default createRootReducer;
