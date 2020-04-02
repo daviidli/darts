@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
 import { History } from 'history';
-import counter from './counter';
+import serialPort from './serialPort';
 
 const createRootReducer = (history: History<History.PoorMansUnknown>) => {
 	return combineReducers({
 		router: connectRouter(history),
-		counter
+		serialPort
 	});
 };
 

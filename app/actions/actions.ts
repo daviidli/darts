@@ -1,10 +1,12 @@
-import actions from './actions.json';
+import actions from './actionTypes.json';
 
-export const setSerialPort = (port: string) => ({
-	type: actions.SET_SERIAL_PORT,
-	port
-});
-
-export const test = () => {
-	return {};
+const setSerialPort = (port: string) => {
+	return {
+		type: actions.SET_SERIAL_PORT,
+		port
+	};
 };
+
+const test = () => {};
+
+export { setSerialPort, test };
