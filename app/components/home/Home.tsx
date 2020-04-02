@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Grid, Typography, Button } from '@material-ui/core';
 import routes from '../../constants/routes.json';
 import styles from './Home.scss';
+import Games from '../games/Games';
 
 const Home = () => {
 	const history = useHistory();
@@ -21,17 +22,8 @@ const Home = () => {
 					Darts
 				</Typography>
 			</Grid>
-			<Link to={routes.GAME}>Link</Link>
 			<Grid item>
-				<Button
-					className={styles.button}
-					variant="contained"
-					color="primary"
-					disableElevation
-					onClick={() => history.push(routes.GAME)}
-				>
-					Play
-				</Button>
+				<Games />
 			</Grid>
 			<Grid item>
 				<Button
