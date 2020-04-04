@@ -7,6 +7,7 @@ import maxRounds from './maxRounds';
 import rounds from './rounds';
 import maxThrows from './maxThrows';
 import currentThrows from './currentThrows';
+import totals from './totals';
 
 const createRootReducer = (history: any) => {
 	return combineReducers({
@@ -17,7 +18,8 @@ const createRootReducer = (history: any) => {
 		maxRounds,
 		rounds,
 		maxThrows,
-		currentThrows
+		currentThrows,
+		totals
 	});
 };
 

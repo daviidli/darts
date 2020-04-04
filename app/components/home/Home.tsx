@@ -3,10 +3,17 @@ import { useHistory } from 'react-router-dom';
 import { Grid, Typography, Button } from '@material-ui/core';
 import routes from '../../constants/routes.json';
 import styles from './Home.scss';
-import Games from '../games/Games';
+import Options, { optionsItems } from '../options/Options';
 
 const Home = () => {
 	const history = useHistory();
+
+	const gameModes: optionsItems[] = [
+		{
+			label: "01's",
+			onClick: () => history.push(routes['01S'])
+		}
+	];
 
 	return (
 		<Grid
@@ -23,7 +30,7 @@ const Home = () => {
 				</Typography>
 			</Grid>
 			<Grid item>
-				<Games />
+				<Options items={gameModes} />
 			</Grid>
 			<Grid item>
 				<Button

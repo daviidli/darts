@@ -2,37 +2,33 @@
 import store from '../store/store';
 import DartBoard from './dartBoard';
 import {
-	setPlayers,
 	setCurrentPlayer,
 	setMaxRounds,
 	addRound,
-	setMaxThrows
+	setMaxThrows,
+	setTotals,
+	setCurrentThrows
 } from '../actions/gameActions';
 
 class GameManager {
 	private readonly dartBoard: DartBoard;
-	private players: string[];
 	private running: boolean;
 	private missed: boolean;
+	private type: string;
 
 	public constructor(port: string) {
 		this.dartBoard = new DartBoard(port);
-		this.players = [];
 		this.running = false;
 		this.missed = false;
+		this.type = '';
 	}
 
-	public addPlayer(name: string) {
-		this.players.push(name);
+	public setType(type: string) {
+		this.type = type;
 	}
 
-	public removePlayer(name: string) {
-		const index = this.players.indexOf(name);
-		if (index < 0) {
-			return;
-		}
-
-		this.players.splice(index, 1);
+	public getType(): string {
+		return this.type;
 	}
 
 	public setTurns(maxTurns: number) {
@@ -43,12 +39,16 @@ class GameManager {
 		console.log('starting');
 		const state = store.getState();
 
-		store.dispatch(setPlayers(this.players));
+		const totals = new Array(state.players.length).fill(
+			this.getValueFromType(this.type)
+		);
+		store.dispatch(setTotals(totals));
 		store.dispatch(setMaxThrows(3));
 
 		this.running = true;
 
 		for (let i = 0; i < state.maxRounds && this.running; i++) {
+			console.log('turn', i);
 			await this.turn();
 		}
 	}
@@ -56,9 +56,12 @@ class GameManager {
 	public async turn() {
 		const state = store.getState();
 
-		const throwResults: string[] = [];
+		const throwResults: string[] = new Array(state.maxThrows).fill(null);
+		store.dispatch(setCurrentThrows(throwResults));
+		console.log('should have somthing');
 		for (let i = 0; i < state.maxThrows; i++) {
 			let currentThrow: string[] = [];
+			console.log('waiting for dart');
 			while (true) {
 				try {
 					currentThrow = await this.dartBoard.getResults(1, 1000);
@@ -67,15 +70,19 @@ class GameManager {
 
 				if (this.missed) {
 					this.missed = false;
-					throwResults.push('miss');
+					console.log('missed');
+					throwResults[i] = 'miss';
 					break;
 				}
 
 				if (currentThrow.length) {
-					throwResults.push(currentThrow[0]);
+					console.log('got dart');
+					// eslint-disable-next-line prefer-destructuring
+					throwResults[i] = currentThrow[0];
 					break;
 				}
 			}
+			store.dispatch(setCurrentThrows(throwResults));
 		}
 
 		store.dispatch(addRound(throwResults));
@@ -85,10 +92,15 @@ class GameManager {
 	public stop() {
 		this.running = false;
 		// todo: clear game states
+		this.dartBoard.close();
 	}
 
 	public miss() {
 		this.missed = true;
+	}
+
+	private getValueFromType(type: string): number {
+		return parseInt(type, 10);
 	}
 }
 

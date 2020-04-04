@@ -1,13 +1,18 @@
 import { Dispatch as ReduxDispatch, Store as ReduxStore, Action } from 'redux';
 
+export type playerType = {
+	id: string;
+	name: string;
+};
+
 export type stateType = {
 	serialPort: string;
-	players: string[];
-	currentPlayer: string; // todo: do I need this?
-	maxRounds: number;
-	rounds: string[][];
-	maxThrows: number;
-	currentThrows: string[];
+	players: playerType;
+	rounds: string[][][];
+	currentPlayer: number;
+	currentRound: number;
+	currentThrow: number;
+	totals: number[];
 };
 
 export type GetState = () => stateType;

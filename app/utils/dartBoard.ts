@@ -36,6 +36,10 @@ class DartBoard {
 		});
 	}
 
+	public close() {
+		this.parser.close();
+	}
+
 	private static mapResults(coords: string[]): string[] {
 		return coords.map(coord => {
 			const [x, y] = coord.split(',');
