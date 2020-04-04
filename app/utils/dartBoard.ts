@@ -24,7 +24,7 @@ class DartBoard {
 				timeoutObj = setTimeout(() => reject(), timeout);
 			}
 
-			this.parser.on('data', data => {
+			this.parser.on('data', (data: string) => {
 				results.push(data);
 
 				if (results.length === n) {
