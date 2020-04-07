@@ -12,6 +12,7 @@ import {
 import { useHistory } from 'react-router-dom';
 import routes from '../../constants/routes.json';
 import styles from './Settings.scss';
+import SettingsSlider from '../settingsSlider/SettingsSlider';
 
 type Props = {
 	setSerialPort: (port: string) => {};
@@ -41,11 +42,11 @@ const Settings = (props: Props) => {
 			spacing={3}
 			className={styles.settings}
 		>
-			<Grid item>
+			<Grid item className={styles.gridItem}>
 				<Typography className={styles.title}>Settings</Typography>
 			</Grid>
-			<Grid item>
-				<FormControl variant="outlined" className={styles.select}>
+			<Grid item className={styles.gridItem}>
+				<FormControl variant="outlined" className={styles.gridItem}>
 					<InputLabel>Serial Port</InputLabel>
 					<Select
 						value={serialPort}
@@ -65,7 +66,10 @@ const Settings = (props: Props) => {
 					</Select>
 				</FormControl>
 			</Grid>
-			<Grid item>
+			<Grid item className={styles.gridItem}>
+				<SettingsSlider className={styles.slider} />
+			</Grid>
+			<Grid item className={styles.gridItem}>
 				<Button
 					variant="contained"
 					onClick={() => history.push(routes.HOME)}

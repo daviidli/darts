@@ -9,7 +9,18 @@ import Routes from '../Routes';
 
 const theme = createMuiTheme({
 	palette: {
-		type: 'dark'
+		type: 'dark',
+		primary: {
+			main: '#F1AF2C',
+			light: '#F9C660',
+			dark: '#E49708'
+		},
+		secondary: {
+			main: '#018FF7',
+			light: '#33A9FF',
+			dark: '#0371C4'
+		},
+		contrastThreshold: 3
 	}
 });
 

@@ -9,49 +9,52 @@ import {
 } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { MdDelete } from 'react-icons/md';
-import { stateType } from '../../reducers/types';
+import { stateType, playerType } from '../../reducers/types';
 import {
 	addPlayer as addPlayerAction,
 	removePlayer as removePlayerAction,
-	setPlayer as setPlayerAction
+	changePlayer as changePlayerAction
 } from '../../actions/gameActions';
 
 type Props = {
-	players: string[];
+	players: playerType[];
 	addPlayer: (player: string) => {};
-	removePlayer: (player: string) => {};
-	setPlayer: (players: string[]) => {};
+	removePlayer: (index: number) => {};
+	changePlayer: (players: string, index: number) => {};
 };
 
 const Players = (props: Props) => {
-	const { players, addPlayer, removePlayer, setPlayer } = props;
+	const { players, addPlayer, removePlayer, changePlayer } = props;
 	return (
-		<List>
-			{players.map((player, i) => (
-				// eslint-disable-next-line react/no-array-index-key
-				<ListItem key={`player-${i}`}>
-					<TextField
-						label={`Player ${i + 1}`}
-						value={player}
-						onChange={e => setPlayer(e.target.value, i)}
-					/>
-					<ListItemSecondaryAction>
-						<IconButton
-							edge="end"
-							onClick={() => removePlayer(player)}
-						>
-							<MdDelete />
-						</IconButton>
-					</ListItemSecondaryAction>
-				</ListItem>
-			))}
+		<>
+			<List>
+				{players.map((player, i) => (
+					<ListItem key={`player-${player.id}`}>
+						<TextField
+							label={`Player ${i + 1}`}
+							value={player.name}
+							onChange={e => changePlayer(e.target.value, i)}
+							color="secondary"
+						/>
+						<ListItemSecondaryAction>
+							<IconButton
+								edge="end"
+								onClick={() => removePlayer(i)}
+							>
+								<MdDelete />
+							</IconButton>
+						</ListItemSecondaryAction>
+					</ListItem>
+				))}
+			</List>
 			<Button
 				variant="contained"
+				color="secondary"
 				onClick={() => addPlayer(`player ${players.length + 1}`)}
 			>
 				Add player
 			</Button>
-		</List>
+		</>
 	);
 };
 
@@ -59,7 +62,7 @@ const mapStateToProps = (state: stateType) => ({ players: state.players });
 const mapDispatchToProps = {
 	addPlayer: addPlayerAction,
 	removePlayer: removePlayerAction,
-	setPlayer: setPlayerAction
+	changePlayer: changePlayerAction
 };
 
 export default connect<any, any, any, stateType>(

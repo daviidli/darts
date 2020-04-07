@@ -14,10 +14,12 @@ type Props = {
 const Options = (props: Props) => {
 	const { items } = props;
 	return (
-		<Grid container className={styles.options}>
+		<Grid container className={styles.options} justify="center">
 			{items.map(item => (
 				<Grid item key={item.label}>
 					<Button
+						variant="contained"
+						color="primary"
 						className={styles.button}
 						onClick={() => item.onClick(item.label)}
 					>
