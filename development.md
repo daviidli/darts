@@ -72,17 +72,17 @@ Example for X01 game mode: [OOneGameManager.ts](app/gameModes/oOneGame/OOneGameM
 
 ```typescript
 export type stateType = {
-	serialPort: string; // serial port of the Arduino
-	clearDartsWaitTime: number; // how long the clear darts screen is shown for
-	players: playerType[]; // list of players
-	maxDarts: number; // max number of throws for each player per round
-	maxRounds: number; // max number of rounds per player
-	currentPlayer: number; // index of current player
-	currentDart: number; // index of current throw
-	currentRound: number; // index of current round
-	rounds: string[][][]; // store of all throws in game
-	totals: any[]; // used as additional store for game modes
-	winner: number; // index of winning player
-	waiting: boolean; // flag whether to show clear darts screen
+	serialPort: string;          // serial port of the Arduino
+	clearDartsWaitTime: number;  // how long the clear darts screen is shown for
+	players: playerType[];       // list of players
+	maxDarts: number;            // max number of throws for each player per round
+	maxRounds: number;           // max number of rounds per player
+	currentPlayer: number;       // index of current player
+	currentDart: number;         // index of current throw
+	currentRound: number;        // index of current round
+	rounds: string[][][];        // store of all throws in game
+	totals: any[];               // used as additional store for game modes
+	winner: number;              // index of winning player
+	waiting: boolean;            // flag whether to show clear darts screen
 };
 ```
