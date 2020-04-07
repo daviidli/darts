@@ -8,7 +8,7 @@ export type playerType = {
 export type stateType = {
 	serialPort: string;
 	clearDartsWaitTime: number;
-	players: playerType;
+	players: playerType[];
 	maxDarts: number;
 	maxRounds: number;
 	currentPlayer: number;

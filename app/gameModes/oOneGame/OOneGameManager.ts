@@ -33,7 +33,6 @@ class OOneGameManager extends GameManager {
 			const { currentPlayer, currentRound, totals } = store.getState();
 
 			store.dispatch(setCurrentDart(d));
-			// eslint-disable-next-line no-await-in-loop
 			const dart = await this.getDart();
 			store.dispatch(setRound(currentPlayer, currentRound, d, dart));
 

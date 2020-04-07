@@ -8,7 +8,8 @@ module.exports = {
 		'lines-between-class-members': 'off',
 		'no-plusplus': ['error', { 'allowForLoopAfterthoughts': true }],
 		'class-methods-use-this': 'off',
-		'react/no-array-index-key': 'off'
+		'react/no-array-index-key': 'off',
+		'no-await-in-loop': 'off'
 	},
 	settings: {
 		'import/resolver': {
