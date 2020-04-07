@@ -1,12 +1,11 @@
 import actions from './actionTypes.json';
 
-const setSerialPort = (port: string) => {
-	return {
-		type: actions.SET_SERIAL_PORT,
-		port
-	};
-};
+export const setSerialPort = (port: string) => ({
+	type: actions.SET_SERIAL_PORT,
+	port
+});
 
-const test = () => {};
-
-export { setSerialPort, test };
+export const setWaitTime = (waitTime: number) => ({
+	type: actions.SET_WAIT_TIME,
+	waitTime
+});

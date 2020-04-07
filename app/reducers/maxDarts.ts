@@ -1,9 +1,9 @@
 import { AnyAction } from 'redux';
 import actions from '../actions/actionTypes.json';
 
-const maxRounds = (state = 0, action: AnyAction) => {
+const maxDarts = (state = 0, action: AnyAction) => {
 	switch (action.type) {
-		case actions.SET_MAX_ROUNDS: {
+		case actions.SET_MAX_DARTS: {
 			return action.max;
 		}
 		default: {
@@ -12,4 +12,4 @@ const maxRounds = (state = 0, action: AnyAction) => {
 	}
 };
 
-export default maxRounds;
+export default maxDarts;

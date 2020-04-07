@@ -7,16 +7,21 @@ export type playerType = {
 
 export type stateType = {
 	serialPort: string;
+	clearDartsWaitTime: number;
 	players: playerType;
-	rounds: string[][][];
+	maxDarts: number;
+	maxRounds: number;
 	currentPlayer: number;
+	currentDart: number;
 	currentRound: number;
-	currentThrow: number;
-	totals: number[];
+	rounds: string[][][];
+	totals: any[];
+	winner: number;
+	waiting: boolean;
 };
 
 export type GetState = () => stateType;
 
-export type Dispatch = ReduxDispatch<Action<string>>;
+export type Dispatch = ReduxDispatch<Action<any>>;
 
-export type Store = ReduxStore<stateType, Action<string>>;
+export type Store = ReduxStore<stateType, Action<any>>;

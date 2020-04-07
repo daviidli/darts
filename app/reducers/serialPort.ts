@@ -3,10 +3,12 @@ import actions from '../actions/actionTypes.json';
 
 const serialPort = (state = '', action: AnyAction) => {
 	switch (action.type) {
-		case actions.SET_SERIAL_PORT:
+		case actions.SET_SERIAL_PORT: {
 			return action.port;
-		default:
+		}
+		default: {
 			return state;
+		}
 	}
 };
 

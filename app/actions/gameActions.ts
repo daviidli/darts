@@ -1,14 +1,9 @@
 import actions from './actionTypes.json';
+import { playerType } from '../reducers/types';
 
-export const setPlayers = (players: string[]) => ({
+export const setPlayers = (players: playerType[]) => ({
 	type: actions.SET_PLAYERS,
 	players
-});
-
-export const setPlayer = (player: string, index: number) => ({
-	type: actions.SET_PLAYER,
-	player,
-	index
 });
 
 export const addPlayer = (player: string) => ({
@@ -16,9 +11,25 @@ export const addPlayer = (player: string) => ({
 	player
 });
 
-export const removePlayer = (player: string) => ({
+export const removePlayer = (index: number) => ({
 	type: actions.REMOVE_PLAYER,
-	player
+	index
+});
+
+export const changePlayer = (player: string, index: number) => ({
+	type: actions.CHANGE_PLAYER,
+	player,
+	index
+});
+
+export const setMaxDarts = (max: number) => ({
+	type: actions.SET_MAX_DARTS,
+	max
+});
+
+export const setMaxRounds = (max: number) => ({
+	type: actions.SET_MAX_ROUNDS,
+	max
 });
 
 export const setCurrentPlayer = (index: number) => ({
@@ -26,34 +37,45 @@ export const setCurrentPlayer = (index: number) => ({
 	index
 });
 
-export const setMaxRounds = (maxRounds: number) => ({
-	type: actions.SET_MAX_ROUNDS,
-	maxRounds
+export const setCurrentDart = (index: number) => ({
+	type: actions.SET_CURRENT_DART,
+	index
 });
 
-// todo: set rounds
-
-export const addRound = (round: string[]) => ({
-	type: actions.ADD_ROUND,
-	round
-});
-
-export const setMaxThrows = (maxThrows: number) => ({
-	type: actions.SET_MAX_THROWS,
-	maxThrows
-});
-
-export const setCurrentRound = (currentRound: number) => ({
+export const setCurrentRound = (index: number) => ({
 	type: actions.SET_CURRENT_ROUND,
-	currentRound
+	index
 });
 
-export const setCurrentThrow = (currentThrow: string[]) => ({
-	type: actions.SET_CURRENT_THROW,
-	currentThrow
+export const initializedRound = (rounds: string[][][]) => ({
+	type: actions.INITIALIZE_ROUNDS,
+	rounds
 });
 
-export const setTotals = (totals: number[]) => ({
+export const setRound = (
+	player: number,
+	round: number,
+	dart: number,
+	roundValue: string
+) => ({
+	type: actions.SET_ROUND,
+	player,
+	round,
+	dart,
+	roundValue
+});
+
+export const setTotals = (totals: any[]) => ({
 	type: actions.SET_TOTALS,
 	totals
+});
+
+export const setWinner = (winner: number) => ({
+	type: actions.SET_WINNER,
+	winner
+});
+
+export const setWaiting = (waiting: boolean) => ({
+	type: actions.SET_WAITING,
+	waiting
 });

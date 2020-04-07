@@ -1,10 +1,10 @@
 import { AnyAction } from 'redux';
 import actions from '../actions/actionTypes.json';
 
-const maxRounds = (state = 0, action: AnyAction) => {
+const currentDart = (state = 0, action: AnyAction) => {
 	switch (action.type) {
-		case actions.SET_MAX_ROUNDS: {
-			return action.max;
+		case actions.SET_CURRENT_DART: {
+			return action.index;
 		}
 		default: {
 			return state;
@@ -12,4 +12,4 @@ const maxRounds = (state = 0, action: AnyAction) => {
 	}
 };
 
-export default maxRounds;
+export default currentDart;

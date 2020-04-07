@@ -1,28 +1,41 @@
 import { AnyAction } from 'redux';
+import { v4 as uuidv4 } from 'uuid';
+import rfdc from 'rfdc';
 import actions from '../actions/actionTypes.json';
+import { playerType } from './types';
 
-const players = (state: string[] = [], action: AnyAction) => {
+const players = (state: playerType[] = [], action: AnyAction) => {
 	switch (action.type) {
 		case actions.SET_PLAYERS: {
 			return action.players;
 		}
-		case actions.SET_PLAYER: {
-			const newPlayers = state.slice();
-			newPlayers[action.index] = action.player;
-			return newPlayers;
-		}
 		case actions.ADD_PLAYER: {
-			const newPlayers = state.slice();
-			newPlayers.push(action.player);
-			return newPlayers;
+			const newState = rfdc()(state);
+			const newPlayer: playerType = {
+				id: uuidv4(),
+				name: action.player
+			};
+			newState.push(newPlayer);
+			return newState;
 		}
 		case actions.REMOVE_PLAYER: {
-			const newPlayers = state.slice();
-			const index = newPlayers.indexOf(action.player);
-			if (index >= 0) {
-				newPlayers.splice(index, 1);
+			if (action.index >= state.length) {
+				return state;
 			}
-			return newPlayers;
+
+			const newState = rfdc()(state);
+			newState.splice(action.index, 1);
+			return newState;
+		}
+		case actions.CHANGE_PLAYER: {
+			const { player, index } = action;
+			if (index >= state.length) {
+				return state;
+			}
+
+			const newState = rfdc()(state);
+			newState[index].name = player;
+			return newState;
 		}
 		default: {
 			return state;

@@ -7,7 +7,8 @@ module.exports = {
 		'react/jsx-indent-props': [2, 'tab'],
 		'lines-between-class-members': 'off',
 		'no-plusplus': ['error', { 'allowForLoopAfterthoughts': true }],
-		'class-methods-use-this': 'off'
+		'class-methods-use-this': 'off',
+		'react/no-array-index-key': 'off'
 	},
 	settings: {
 		'import/resolver': {
