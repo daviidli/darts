@@ -1,0 +1,13 @@
+.double::after {
+	content: 'x2';
+	font-size: 0.85em;
+	padding-left: 0.25em;
+	color: #e74c3c;
+}
+
+.triple::after {
+	content: 'x3';
+	font-size: 0.85em;
+	padding-left: 0.25em;
+	color: #3498db;
+}

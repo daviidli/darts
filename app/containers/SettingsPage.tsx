@@ -1,7 +1,16 @@
-import React from 'react';
+import { connect } from 'react-redux';
+import Settings from '../components/settings/Settings';
+import { stateType } from '../reducers/types';
+import { setSerialPort } from '../actions/actions';
 
-const SettingsPage = () => {
-	return <div>hello world</div>;
+const mapStateToProps = (state: stateType) => {
+	return {
+		serialPort: state.serialPort
+	};
 };
 
-export default SettingsPage;
+const mapDispatchToProps = {
+	setSerialPort
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Settings);

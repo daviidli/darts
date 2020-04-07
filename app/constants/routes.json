@@ -1,5 +1,6 @@
 {
 	"HOME": "/",
-	"GAME": "/game",
+	"OONE": "/oOne",
+	"START": "/start",
 	"SETTINGS": "/settings"
 }
