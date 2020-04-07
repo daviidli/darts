@@ -31,3 +31,7 @@ Details can be found [here](development.md).
 -   Show player stats side panel
 -   Save/store player data to track progress over time
 -   Light vs dark theme
+-   Show total for each round
+-   Have toggle for s-bull and d-bull to both be 50
+-   Make font larger/touch friendly
+-   Add control for xbox controller
