@@ -18,6 +18,8 @@ To set up your own board, just follow the OpenDarts tutorial listed above. The c
 
 Upon launching the Darts app, it should automatically pick the first serial port found. This can be changed in the settings. Configuration of the delimiter and baud rate has not been implemented yet.
 
+To generate a mapping for your specific configuration of pins, run `yarn && yarn generate` in the [generateMappings](generateMappings/) folder.
+
 ## Development
 
 Details can be found [here](development.md).

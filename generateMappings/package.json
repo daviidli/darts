@@ -1,0 +1,12 @@
+{
+  "name": "generateMappings",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+	  "generate": "node generateMappings.js"
+  },
+  "dependencies": {
+    "serialport": "^8.0.7"
+  }
+}
