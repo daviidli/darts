@@ -6,7 +6,7 @@ This is Electron app that communicates with an Arduino attached to a dart board 
 
 I got the inspiration from this tutorial on OpenDarts ([OpenDarts - Homemade Dartboard Machine](https://www.hackster.io/ricardo-alves/opendarts-homemade-dartboard-machine-2a2914)), but unfortunately OpenDarts is for Windows only.
 
-This project is built using the [Electron-React-Boilerplate](https://github.com/electron-react-boilerplate/electron-react-boilerplate) and still under development. It is written in Typescript and uses React for frontend and Redux for state management. Communication with the Arduino is done using the [SerialPort](https://serialport.io/) package.
+This project is built using the [Electron-React-Boilerplate](https://github.com/electron-react-boilerplate/electron-react-boilerplate) and is still under development. It is written in Typescript and uses React for the frontend and Redux for state management. Communication with the Arduino is done using the [SerialPort](https://serialport.io/) node module.
 
 ## Current [Game Modes](https://www.8dartfinish.com/21-popular-darts-games-play-dartboard/)
 
