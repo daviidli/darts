@@ -7,23 +7,17 @@ import {
 	IconButton,
 	Button
 } from '@material-ui/core';
-import { connect } from 'react-redux';
 import { MdDelete } from 'react-icons/md';
-import { stateType, playerType } from '../../reducers/types';
-import {
-	addPlayer as addPlayerAction,
-	removePlayer as removePlayerAction,
-	changePlayer as changePlayerAction
-} from '../../actions/gameActions';
+import { playerType } from '../../reducers/types';
 
-type Props = {
+export type Props = {
 	players: playerType[];
 	addPlayer: (player: string) => {};
 	removePlayer: (index: number) => {};
 	changePlayer: (players: string, index: number) => {};
 };
 
-const Players = (props: Props) => {
+const PlayersComponent = (props: Props) => {
 	const { players, addPlayer, removePlayer, changePlayer } = props;
 	return (
 		<>
@@ -52,20 +46,10 @@ const Players = (props: Props) => {
 				color="secondary"
 				onClick={() => addPlayer(`player ${players.length + 1}`)}
 			>
-				Add player
+				Add Player
 			</Button>
 		</>
 	);
 };
 
-const mapStateToProps = (state: stateType) => ({ players: state.players });
-const mapDispatchToProps = {
-	addPlayer: addPlayerAction,
-	removePlayer: removePlayerAction,
-	changePlayer: changePlayerAction
-};
-
-export default connect<any, any, any, stateType>(
-	mapStateToProps,
-	mapDispatchToProps
-)(Players);
+export default PlayersComponent;

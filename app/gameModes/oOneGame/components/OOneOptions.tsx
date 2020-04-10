@@ -3,7 +3,7 @@ import { useHistory } from 'react-router';
 import { Grid, Button } from '@material-ui/core';
 import routes from '../../../constants/routes.json';
 import Options, { optionsItems } from '../../../components/options/Options';
-import Players from '../../../components/players/Players';
+import Players from '../../../containers/Players';
 import styles from './OOneOptions.scss';
 
 type Props = {

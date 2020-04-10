@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Options component should match snapshot 1`] = `
+<div
+  className="MuiGrid-root options MuiGrid-container MuiGrid-justify-xs-center"
+>
+  <div
+    className="MuiGrid-root MuiGrid-item"
+  >
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-contained button MuiButton-containedPrimary"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        op1
+      </span>
+    </button>
+  </div>
+  <div
+    className="MuiGrid-root MuiGrid-item"
+  >
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-contained button MuiButton-containedPrimary"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        op2
+      </span>
+    </button>
+  </div>
+</div>
+`;

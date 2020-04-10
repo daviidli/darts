@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Options component should match snapshot 1`] = `
+<span
+  className="triple"
+>
+  20
+</span>
+`;
+
+exports[`Options component should match snapshot without a modifier 1`] = `
+<span
+  className=""
+>
+  20
+</span>
+`;

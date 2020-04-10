@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Winner component should match the snapshot 1`] = `
+<div
+  className="container"
+>
+  <p
+    className="MuiTypography-root message MuiTypography-body1"
+  >
+    Winner is
+  </p>
+  <p
+    className="MuiTypography-root name MuiTypography-body1"
+  >
+    player1
+  </p>
+  <button
+    className="MuiButtonBase-root MuiButton-root MuiButton-contained button MuiButton-containedSecondary"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label"
+    >
+      Home
+    </span>
+  </button>
+</div>
+`;

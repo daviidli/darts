@@ -12,7 +12,7 @@ import {
 import { useHistory } from 'react-router-dom';
 import routes from '../../constants/routes.json';
 import styles from './Settings.scss';
-import SettingsSlider from '../settingsSlider/SettingsSlider';
+import SettingsSlider from '../../containers/SettingsSlider';
 
 type Props = {
 	setSerialPort: (port: string) => {};
@@ -50,8 +50,8 @@ const Settings = (props: Props) => {
 					<InputLabel>Serial Port</InputLabel>
 					<Select
 						value={serialPort}
-						onChange={(event: any) => {
-							setSerialPort(event.target.value);
+						onChange={event => {
+							setSerialPort(event.target.value as string);
 						}}
 						label="Serial Port"
 					>

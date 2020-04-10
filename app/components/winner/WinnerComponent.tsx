@@ -1,19 +1,17 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { Typography, Button } from '@material-ui/core';
-import { useHistory } from 'react-router';
-import { stateType, playerType } from '../../reducers/types';
-import styles from './Winner.scss';
+import { playerType } from '../../reducers/types';
+import styles from './WinnerComponent.scss';
 import routes from '../../constants/routes.json';
-import { setWinner as setWinnerAction } from '../../actions/gameActions';
 
-type Props = {
+export type Props = {
 	winner: number;
 	players: playerType[];
 	setWinner: (index: number) => {};
 };
 
-const Winner = (props: Props) => {
+const WinnerComponent = (props: Props) => {
 	const { winner, players, setWinner } = props;
 	const history = useHistory();
 
@@ -40,16 +38,4 @@ const Winner = (props: Props) => {
 	);
 };
 
-const mapStateToProps = (state: stateType) => ({
-	winner: state.winner,
-	players: state.players
-});
-
-const actions = {
-	setWinner: setWinnerAction
-};
-
-export default connect<any, any, any, stateType>(
-	mapStateToProps,
-	actions
-)(Winner);
+export default WinnerComponent;

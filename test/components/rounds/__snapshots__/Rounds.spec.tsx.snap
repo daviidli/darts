@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rounds component should match snapshot 1`] = `
+<li>
+  <span
+    className="item first"
+  >
+    <span
+      className=""
+    >
+      1
+    </span>
+  </span>
+  <span
+    className="item"
+  >
+    <span
+      className="triple"
+    >
+      20
+    </span>
+  </span>
+  <span
+    className="item last"
+  >
+    <span
+      className="double"
+    >
+      Bull
+    </span>
+  </span>
+</li>
+`;

@@ -7,15 +7,11 @@ import { useHistory } from 'react-router';
 import { GiDart } from 'react-icons/gi';
 import { stateType, playerType } from '../../reducers/types';
 import GameManager from '../../utils/GameManager';
-import Winner from '../winner/Winner';
+import Winner from '../../containers/Winner';
 import styles from './Panel.scss';
 import routes from '../../constants/routes.json';
 import Rounds from '../rounds/Rounds';
-import {
-	getPreviousRounds,
-	mappingToString,
-	dartValue
-} from '../../utils/dartUtils';
+import { getPreviousRounds, mappingToString } from '../../utils/dartUtils';
 import DartText from '../dartText/DartText';
 
 type Props = {

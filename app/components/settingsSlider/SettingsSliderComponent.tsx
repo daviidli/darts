@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Typography, Slider } from '@material-ui/core';
-import { connect } from 'react-redux';
-import { stateType } from '../../reducers/types';
-import { setWaitTime as setWaitTimeAction } from '../../actions/actions';
 
-type Props = {
+export type Props = {
 	clearDartsWaitTime: number;
 	setWaitTime: (wait: number) => {};
 	className?: string;
 };
 
-const SettingsSlider = (props: Props) => {
+const SettingsSliderComponent = (props: Props) => {
 	const { clearDartsWaitTime, setWaitTime, className } = props;
 	const [sliderValue, setSliderValue] = useState<number>(clearDartsWaitTime);
 
@@ -60,15 +57,4 @@ const SettingsSlider = (props: Props) => {
 	);
 };
 
-const mapStateToProps = (state: stateType) => ({
-	clearDartsWaitTime: state.clearDartsWaitTime
-});
-
-const actions = {
-	setWaitTime: setWaitTimeAction
-};
-
-export default connect<any, any, any, stateType>(
-	mapStateToProps,
-	actions
-)(SettingsSlider);
+export default SettingsSliderComponent;
