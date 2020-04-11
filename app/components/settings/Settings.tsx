@@ -14,7 +14,7 @@ import routes from '../../constants/routes.json';
 import styles from './Settings.scss';
 import SettingsSlider from '../../containers/SettingsSlider';
 
-type Props = {
+export type Props = {
 	setSerialPort: (port: string) => {};
 	serialPort: string;
 };
@@ -26,11 +26,20 @@ const Settings = (props: Props) => {
 
 	useEffect(() => {
 		const fetchPorts = async () => {
-			const p = await SerialPort.list();
-			setPortsList(p.filter((port: PortInfo) => port.manufacturer));
+			try {
+				let p = await SerialPort.list();
+				p = p.filter((port: PortInfo) => port.manufacturer);
+				if (p.length) {
+					setPortsList(p);
+				}
+			} catch (e) {
+				// continue regardless of error
+			}
 		};
 
-		fetchPorts();
+		if (ports === []) {
+			fetchPorts();
+		}
 	}, [setPortsList]);
 
 	return (

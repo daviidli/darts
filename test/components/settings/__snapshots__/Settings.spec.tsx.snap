@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Settings component should match snapshot 1`] = `
+<div
+  className="MuiGrid-root settings MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-direction-xs-column MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+>
+  <div
+    className="MuiGrid-root gridItem MuiGrid-item"
+  >
+    <p
+      className="MuiTypography-root title MuiTypography-body1"
+    >
+      Settings
+    </p>
+  </div>
+  <div
+    className="MuiGrid-root gridItem MuiGrid-item"
+  >
+    <div
+      className="MuiFormControl-root gridItem"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+        data-shrink={false}
+      >
+        Serial Port
+      </label>
+      <div
+        className="selectMock"
+        onChange={[Function]}
+      >
+        port1
+      </div>
+      <div
+        className="lableMock"
+      >
+        Serial Port
+      </div>
+      <div
+        className="childrenMock"
+      >
+        <li
+          aria-disabled={false}
+          className="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="menuitem"
+          tabIndex={-1}
+          value=""
+        >
+          <em>
+            None
+          </em>
+        </li>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiGrid-root gridItem MuiGrid-item"
+  >
+    <div
+      className="SettingsSlider"
+    />
+  </div>
+  <div
+    className="MuiGrid-root gridItem MuiGrid-item"
+  >
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-contained"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        Back
+      </span>
+    </button>
+  </div>
+</div>
+`;
