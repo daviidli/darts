@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import SerialPort, { PortInfo } from 'serialport';
+import React from 'react';
 import {
 	Grid,
 	FormControl,
@@ -13,6 +12,7 @@ import { useHistory } from 'react-router-dom';
 import routes from '../../constants/routes.json';
 import styles from './Settings.scss';
 import SettingsSlider from '../../containers/SettingsSlider';
+import useSerialPorts from '../../hooks/useSerialPorts';
 
 export type Props = {
 	setSerialPort: (port: string) => {};
@@ -21,26 +21,8 @@ export type Props = {
 
 const Settings = (props: Props) => {
 	const { setSerialPort, serialPort } = props;
-	const [ports, setPortsList] = useState<PortInfo[]>([]);
+	const ports = useSerialPorts();
 	const history = useHistory();
-
-	useEffect(() => {
-		const fetchPorts = async () => {
-			try {
-				let p = await SerialPort.list();
-				p = p.filter((port: PortInfo) => port.manufacturer);
-				if (p.length) {
-					setPortsList(p);
-				}
-			} catch (e) {
-				// continue regardless of error
-			}
-		};
-
-		if (ports === []) {
-			fetchPorts();
-		}
-	}, [setPortsList]);
 
 	return (
 		<Grid
