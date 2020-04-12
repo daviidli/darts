@@ -1,4 +1,4 @@
-<div style="text-align: center"><img src="resources/imgs/darts.png" /></div>
+# Darts
 
 ## About
 
@@ -22,16 +22,103 @@ To generate a mapping for your specific configuration of pins, run `yarn && yarn
 
 ## Development
 
-Details can be found [here](development.md).
+### `yarn`
 
-## Todos
+Install dependencies
 
--   Add setting to specifiy file for mappings
--   Implement more game modes
--   Show player stats side panel
--   Save/store player data to track progress over time
--   Light vs dark theme
--   Show total for each round
--   Have toggle for s-bull and d-bull to both be 50
--   Make font larger/touch friendly
--   Add control for xbox controller
+### `yarn dev`
+
+Runs the app in development mode
+
+### `yarn test`
+
+Runs unit tests. Can call `yarn test-watch` for Jest to watch tests.
+
+More info can be found in [Electron-React-Boilerplate](https://electron-react-boilerplate.js.org/)'s docs.
+
+## GameManager API
+
+[GameManager.ts](app/utils/GameManager.ts)
+
+Game mode specific files are in [app/gameModes/](app/gameModes/). To write a new game mode, create the necessary components for the game and extend the `GameManager` class.
+
+Example for X01 game mode: [OOneGameManager.ts](app/gameModes/oOneGame/OOneGameManager.ts)
+
+### Methods to implement
+
+```typescript
+	/**
+	 * Perform any necessary initializations for the game mode
+	 * Then call this.superStart()
+	 */
+	public abstract start(): void;
+
+	/**
+	 * This function will be called each turn
+	 */
+	public abstract async turn(): Promise<void>;
+```
+
+### Helper methods
+
+```typescript
+	/**
+	 * To be called by start()
+	 * Increments the Redux store to correspond with the current player and round
+	 */
+	protected async superStart(): void;
+
+	/**
+	 * On resolve, will return the dart value
+	 * If miss() was called while waiting for dart, "miss" will be returned
+	 */
+	protected async getDart(): Promise<string>;
+
+	/**
+	 * Stops the game and resets Redux store to default values
+	 */
+	public stop(): void;
+
+	/**
+	 * Sets the winner of the game and resets Redux store to default values
+	 *
+	 * @param index - index of player in store.players list
+	 */
+	public setWinner(index: number): void;
+
+	/**
+	 * Triggers a missed dart
+	 */
+	public miss(): void;
+
+	/**
+	 * Returns the running state of the manager
+	 */
+	public getRunning(): boolean;
+
+	/**
+	 * Triggers dartsCleared flag
+	 */
+	public clearedDarts(): void;
+```
+
+## Redux Store
+
+[types.ts](app/reducers/types.ts)
+
+```typescript
+export type stateType = {
+	serialPort: string; // serial port of the Arduino
+	clearDartsWaitTime: number; // how long the clear darts screen is shown for
+	players: playerType[]; // list of players
+	maxDarts: number; // max number of throws for each player per round
+	maxRounds: number; // max number of rounds per player
+	currentPlayer: number; // index of current player
+	currentDart: number; // index of current throw
+	currentRound: number; // index of current round
+	rounds: string[][][]; // store of all throws in game
+	totals: any[]; // used as additional store for game modes
+	winner: number; // index of winning player
+	waiting: boolean; // flag whether to show clear darts screen
+};
+```
