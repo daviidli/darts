@@ -18,21 +18,25 @@ To set up your own board, just follow the OpenDarts tutorial listed above. The c
 
 Upon launching the Darts app, it should automatically pick the first serial port found. This can be changed in the settings. Configuration of the delimiter and baud rate has not been implemented yet.
 
-To generate a mapping for your specific configuration of pins, run `yarn && yarn generate` in the [generateMappings](generateMappings/) folder.
+To generate a mapping for your dartboard configuration, run `yarn && yarn generate` in the [generateMappings](generateMappings/) folder.
 
 ## Development
 
-### `yarn`
+#### `yarn`
 
 Install dependencies
 
-### `yarn dev`
+#### `yarn dev`
 
 Runs the app in development mode
 
-### `yarn test`
+#### `yarn test`
 
 Runs unit tests. Can call `yarn test-watch` for Jest to watch tests.
+
+#### `yarn package`
+
+Package app for local platform
 
 More info can be found in [Electron-React-Boilerplate](https://electron-react-boilerplate.js.org/)'s docs.
 

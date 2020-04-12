@@ -54,6 +54,7 @@ export const mappingToString = (value: string) => {
 			ret.value = 'Bull';
 			ret.modifier = 'd';
 			return ret;
+		case '':
 		case 'miss':
 			ret.value = 'Miss';
 			return ret;
