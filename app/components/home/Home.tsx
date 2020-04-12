@@ -17,7 +17,6 @@ const Home = (props: Props) => {
 	const history = useHistory();
 
 	if (serialPort === '' && ports.length) {
-		console.log('ports', ports);
 		setSerialPort(ports[0].path);
 	}
 

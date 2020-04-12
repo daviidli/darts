@@ -29,7 +29,7 @@ exports[`Settings component should match snapshot 1`] = `
         className="selectMock"
         onChange={[Function]}
       >
-        port1
+        
       </div>
       <div
         className="lableMock"
@@ -39,28 +39,11 @@ exports[`Settings component should match snapshot 1`] = `
       <div
         className="childrenMock"
       >
-        <li
-          aria-disabled={false}
-          className="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
-          onBlur={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role="menuitem"
-          tabIndex={-1}
-          value=""
+        <div
+          className="menuItemMock"
         >
-          <em>
-            None
-          </em>
-        </li>
+          
+        </div>
       </div>
     </div>
   </div>

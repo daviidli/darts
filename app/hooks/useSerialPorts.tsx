@@ -8,7 +8,7 @@ const useSerialPorts = () => {
 		const fetchPorts = async () => {
 			try {
 				let p = await SerialPort.list();
-				p = p.filter((port: PortInfo) => port.manufacturer);
+				p = p.filter((port: PortInfo) => port.serialNumber);
 				if (p.length) {
 					setPorts(p);
 				}
