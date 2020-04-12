@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import SerialPort, { PortInfo } from 'serialport';
+import React from 'react';
 import {
 	Grid,
 	FormControl,
@@ -12,26 +11,18 @@ import {
 import { useHistory } from 'react-router-dom';
 import routes from '../../constants/routes.json';
 import styles from './Settings.scss';
-import SettingsSlider from '../settingsSlider/SettingsSlider';
+import SettingsSlider from '../../containers/SettingsSlider';
+import useSerialPorts from '../../hooks/useSerialPorts';
 
-type Props = {
+export type Props = {
 	setSerialPort: (port: string) => {};
 	serialPort: string;
 };
 
 const Settings = (props: Props) => {
 	const { setSerialPort, serialPort } = props;
-	const [ports, setPortsList] = useState<PortInfo[]>([]);
+	const ports = useSerialPorts();
 	const history = useHistory();
-
-	useEffect(() => {
-		const fetchPorts = async () => {
-			const p = await SerialPort.list();
-			setPortsList(p.filter((port: PortInfo) => port.manufacturer));
-		};
-
-		fetchPorts();
-	}, [setPortsList]);
 
 	return (
 		<Grid
@@ -50,8 +41,8 @@ const Settings = (props: Props) => {
 					<InputLabel>Serial Port</InputLabel>
 					<Select
 						value={serialPort}
-						onChange={(event: any) => {
-							setSerialPort(event.target.value);
+						onChange={event => {
+							setSerialPort(event.target.value as string);
 						}}
 						label="Serial Port"
 					>

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions should create setSerialPort action 1`] = `
+Object {
+  "port": "somePort",
+  "type": "SET_SERIAL_PORT",
+}
+`;
+
+exports[`actions should create setWaitTime action 1`] = `
+Object {
+  "type": "SET_WAIT_TIME",
+  "waitTime": 0,
+}
+`;

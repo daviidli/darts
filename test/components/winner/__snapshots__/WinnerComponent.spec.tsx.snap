@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Winner component should match snapshot 1`] = `
+<div
+  className="container"
+>
+  <WithStyles(ForwardRef(Typography))
+    className="message"
+  >
+    Winner is
+  </WithStyles(ForwardRef(Typography))>
+  <WithStyles(ForwardRef(Typography))
+    className="name"
+  >
+    player1
+  </WithStyles(ForwardRef(Typography))>
+  <WithStyles(ForwardRef(Button))
+    className="button"
+    color="secondary"
+    onClick={[Function]}
+    variant="contained"
+  >
+    Home
+  </WithStyles(ForwardRef(Button))>
+</div>
+`;

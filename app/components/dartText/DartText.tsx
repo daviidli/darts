@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { dartValue } from '../../utils/dartUtils';
 import styles from './DartText.scss';
 
-type Props = {
+export type Props = {
 	value: dartValue;
 	style?: {};
 };

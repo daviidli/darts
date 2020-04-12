@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Players component should match snapshot 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(List))>
+    <WithStyles(ForwardRef(ListItem))
+      key="player-1"
+    >
+      <WithStyles(ForwardRef(TextField))
+        color="secondary"
+        label="Player 1"
+        onChange={[Function]}
+        value="player1"
+      />
+      <WithStyles(ForwardRef(ListItemSecondaryAction))>
+        <WithStyles(ForwardRef(IconButton))
+          edge="end"
+          onClick={[Function]}
+        >
+          <MdDelete />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(ListItemSecondaryAction))>
+    </WithStyles(ForwardRef(ListItem))>
+  </WithStyles(ForwardRef(List))>
+  <WithStyles(ForwardRef(Button))
+    color="secondary"
+    onClick={[Function]}
+    variant="contained"
+  >
+    Add Player
+  </WithStyles(ForwardRef(Button))>
+</Fragment>
+`;
+
+exports[`Players component should match snapshot for 2 players 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(List))>
+    <WithStyles(ForwardRef(ListItem))
+      key="player-1"
+    >
+      <WithStyles(ForwardRef(TextField))
+        color="secondary"
+        label="Player 1"
+        onChange={[Function]}
+        value="player1"
+      />
+      <WithStyles(ForwardRef(ListItemSecondaryAction))>
+        <WithStyles(ForwardRef(IconButton))
+          edge="end"
+          onClick={[Function]}
+        >
+          <MdDelete />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(ListItemSecondaryAction))>
+    </WithStyles(ForwardRef(ListItem))>
+    <WithStyles(ForwardRef(ListItem))
+      key="player-2"
+    >
+      <WithStyles(ForwardRef(TextField))
+        color="secondary"
+        label="Player 2"
+        onChange={[Function]}
+        value="player2"
+      />
+      <WithStyles(ForwardRef(ListItemSecondaryAction))>
+        <WithStyles(ForwardRef(IconButton))
+          edge="end"
+          onClick={[Function]}
+        >
+          <MdDelete />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(ListItemSecondaryAction))>
+    </WithStyles(ForwardRef(ListItem))>
+  </WithStyles(ForwardRef(List))>
+  <WithStyles(ForwardRef(Button))
+    color="secondary"
+    onClick={[Function]}
+    variant="contained"
+  >
+    Add Player
+  </WithStyles(ForwardRef(Button))>
+</Fragment>
+`;

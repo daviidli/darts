@@ -21,7 +21,10 @@ class DartBoard {
 
 			let timeoutObj: NodeJS.Timeout;
 			if (timeout !== -1) {
-				timeoutObj = setTimeout(() => reject(), timeout);
+				timeoutObj = setTimeout(
+					() => reject(new Error('timed out')),
+					timeout
+				);
 			}
 
 			const receiveData = (data: string) => {

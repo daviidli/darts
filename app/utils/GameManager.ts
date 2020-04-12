@@ -32,7 +32,10 @@ abstract class GameManager {
 		this.dartsCleared = false;
 	}
 
-	protected async superStart() {
+	protected abstract initialize(): void;
+	protected abstract async turn(): Promise<void>;
+
+	protected async run() {
 		const {
 			maxRounds,
 			maxDarts,
@@ -63,8 +66,10 @@ abstract class GameManager {
 		while (true) {
 			try {
 				currentDart = await this.dartboard.getResults(1, 500);
-				// eslint-disable-next-line no-empty
-			} catch (e) {}
+			} catch (e) {
+				// continue regardless of error
+				// todo: show error notification
+			}
 
 			if (this.missedDart) {
 				this.missedDart = false;
@@ -75,6 +80,11 @@ abstract class GameManager {
 				return currentDart[0];
 			}
 		}
+	}
+
+	public start() {
+		this.initialize();
+		this.run();
 	}
 
 	public stop() {
@@ -105,9 +115,6 @@ abstract class GameManager {
 	public clearedDarts() {
 		this.dartsCleared = true;
 	}
-
-	public abstract start(): void;
-	public abstract async turn(): Promise<void>;
 
 	private async waitForClearingDarts(timeout = 0) {
 		this.dartsCleared = false;

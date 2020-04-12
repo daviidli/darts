@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Options component should match snapshot 1`] = `
+<WithStyles(ForwardRef(Grid))
+  className="options"
+  container={true}
+  justify="center"
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    key="op1"
+  >
+    <WithStyles(ForwardRef(Button))
+      className="button"
+      color="primary"
+      onClick={[Function]}
+      variant="contained"
+    >
+      op1
+    </WithStyles(ForwardRef(Button))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    key="op2"
+  >
+    <WithStyles(ForwardRef(Button))
+      className="button"
+      color="primary"
+      onClick={[Function]}
+      variant="contained"
+    >
+      op2
+    </WithStyles(ForwardRef(Button))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;

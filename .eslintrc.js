@@ -9,7 +9,8 @@ module.exports = {
 		'no-plusplus': ['error', { 'allowForLoopAfterthoughts': true }],
 		'class-methods-use-this': 'off',
 		'react/no-array-index-key': 'off',
-		'no-await-in-loop': 'off'
+		'no-await-in-loop': 'off',
+		'react/jsx-props-no-spreading': 'off'
 	},
 	settings: {
 		'import/resolver': {

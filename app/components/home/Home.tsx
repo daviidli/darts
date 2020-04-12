@@ -1,29 +1,24 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Grid, Typography, Button } from '@material-ui/core';
-import SerialPort from 'serialport';
 import routes from '../../constants/routes.json';
 import styles from './Home.scss';
 import Options, { optionsItems } from '../options/Options';
-import store from '../../store/store';
-import { setSerialPort } from '../../actions/actions';
+import useSerialPorts from '../../hooks/useSerialPorts';
 
-const Home = () => {
+export type Props = {
+	serialPort: string;
+	setSerialPort: (port: string) => {};
+};
+
+const Home = (props: Props) => {
+	const { serialPort, setSerialPort } = props;
+	const ports = useSerialPorts();
 	const history = useHistory();
 
-	useEffect(() => {
-		const fetchPorts = async () => {
-			const p = await SerialPort.list();
-			if (p.length) {
-				store.dispatch(setSerialPort(p[0].path));
-			}
-		};
-
-		const state = store.getState();
-		if (state.serialPort === '') {
-			fetchPorts();
-		}
-	}, []);
+	if (serialPort === '' && ports.length) {
+		setSerialPort(ports[0].path);
+	}
 
 	const gameModes: optionsItems[] = [
 		{

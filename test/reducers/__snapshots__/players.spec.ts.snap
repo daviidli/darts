@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`players reducer should add a player 1`] = `
+Object {
+  "id": Any<String>,
+  "name": "unicorn",
+}
+`;

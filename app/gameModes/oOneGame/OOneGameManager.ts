@@ -17,17 +17,16 @@ class OOneGameManager extends GameManager {
 		this.type = type;
 	}
 
-	public start() {
+	protected initialize() {
 		const { players } = store.getState();
 		store.dispatch(setMaxRounds(this.getRounds()));
 		store.dispatch(setMaxDarts(3));
 		store.dispatch(
 			setTotals(new Array(players.length).fill(parseInt(this.type, 10)))
 		);
-		this.superStart();
 	}
 
-	public async turn() {
+	protected async turn() {
 		const { maxDarts } = store.getState();
 		for (let d = 0; d < maxDarts; d++) {
 			const { currentPlayer, currentRound, totals } = store.getState();

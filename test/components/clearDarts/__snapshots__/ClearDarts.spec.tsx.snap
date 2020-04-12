@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClearDarts component should match snapshot 1`] = `
+<WithStyles(ForwardRef(Grid))
+  alignItems="center"
+  className="clearDartsPanel"
+  container={true}
+  direction="column"
+  justify="center"
+  spacing={8}
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+  >
+    <WithStyles(ForwardRef(Typography))
+      className="clearDarts"
+      variant="h1"
+    >
+      Clear Darts
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+  >
+    <WithStyles(ForwardRef(Button))
+      color="secondary"
+      onClick={[Function]}
+      variant="contained"
+    >
+      Darts Cleared
+    </WithStyles(ForwardRef(Button))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`ClearDarts component should match snapshot when waiting = true 1`] = `
+<WithStyles(ForwardRef(Grid))
+  alignItems="center"
+  className="clearDartsPanel visible"
+  container={true}
+  direction="column"
+  justify="center"
+  spacing={8}
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+  >
+    <WithStyles(ForwardRef(Typography))
+      className="clearDarts"
+      variant="h1"
+    >
+      Clear Darts
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+  >
+    <WithStyles(ForwardRef(Button))
+      color="secondary"
+      onClick={[Function]}
+      variant="contained"
+    >
+      Darts Cleared
+    </WithStyles(ForwardRef(Button))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;

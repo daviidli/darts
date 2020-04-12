@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import routes from '../../../constants/routes.json';
 import OOneOptions from './OOneOptions';
-import GamePanel from '../../../components/gamePanel/GamePanel';
+import GamePanel from '../../../containers/GamePanel';
 import OOneGameManager from '../OOneGameManager';
 
 const OOneGame = () => {
