@@ -1,8 +1,8 @@
-import { spy, stub } from 'sinon';
+import { spy } from 'sinon';
 import React from 'react';
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import renderer from 'react-test-renderer';
+import toJson from 'enzyme-to-json';
 import Home, { Props } from '../../../app/components/home/Home';
 import useSerialPorts from '../../../app/hooks/useSerialPorts';
 
@@ -45,9 +45,9 @@ const setupMount = (props: Props = initialProps) => {
 };
 
 describe('Home component', () => {
-	it('should match the snapshot', () => {
-		const tree = renderer.create(<Home {...initialProps} />).toJSON();
-		expect(tree).toMatchSnapshot();
+	it('should match snapshot', () => {
+		const { wrapper } = setup();
+		expect(toJson(wrapper)).toMatchSnapshot();
 	});
 
 	it('should go to settings screen on click', () => {

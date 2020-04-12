@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DartsPanel component should match snapshot 1`] = `
+<Fragment>
+  <div
+    className="totalsContainer"
+  >
+    <WithStyles(ForwardRef(Typography))
+      className="totals"
+      variant="h2"
+    >
+      0
+    </WithStyles(ForwardRef(Typography))>
+  </div>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    className="dartsContainer"
+    container={true}
+    direction="row"
+    justify="center"
+  >
+    <WithStyles(ForwardRef(Grid))
+      className="dart active"
+      item={true}
+      key="round-0"
+      xs={true}
+    >
+      <DartText
+        value={
+          Object {
+            "modifier": "",
+            "value": "1",
+          }
+        }
+      />
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      className="dart"
+      item={true}
+      key="round-1"
+      xs={true}
+    >
+      <GiDart />
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</Fragment>
+`;

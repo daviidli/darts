@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RoundsPanel component should match snapshot 1`] = `
+<div
+  className="rounds"
+>
+  <WithStyles(ForwardRef(Typography))
+    variant="h4"
+  >
+    Rounds (1/1)
+  </WithStyles(ForwardRef(Typography))>
+  <ol
+    start={1}
+  />
+</div>
+`;
+
+exports[`RoundsPanel component should match snapshot with 2 rounds 1`] = `
+<div
+  className="rounds"
+>
+  <WithStyles(ForwardRef(Typography))
+    variant="h4"
+  >
+    Rounds (1/2)
+  </WithStyles(ForwardRef(Typography))>
+  <ol
+    start={1}
+  />
+</div>
+`;
+
+exports[`RoundsPanel component should match snapshot with many rounds 1`] = `
+<div
+  className="rounds"
+>
+  <WithStyles(ForwardRef(Typography))
+    variant="h4"
+  >
+    Rounds (8/9)
+  </WithStyles(ForwardRef(Typography))>
+  <ol
+    start={2}
+  >
+    <Rounds
+      key="round-0"
+      round={
+        Array [
+          "1-d",
+          "2-t",
+          "b",
+        ]
+      }
+    />
+    <Rounds
+      key="round-1"
+      round={
+        Array [
+          "1",
+          "2",
+          "3",
+        ]
+      }
+    />
+    <Rounds
+      key="round-2"
+      round={
+        Array [
+          "1-d",
+          "2-t",
+          "b",
+        ]
+      }
+    />
+    <Rounds
+      key="round-3"
+      round={
+        Array [
+          "1",
+          "2",
+          "3",
+        ]
+      }
+    />
+    <Rounds
+      key="round-4"
+      round={
+        Array [
+          "1-d",
+          "2-t",
+          "b",
+        ]
+      }
+    />
+    <Rounds
+      key="round-5"
+      round={
+        Array [
+          "1",
+          "2",
+          "3",
+        ]
+      }
+    />
+  </ol>
+</div>
+`;

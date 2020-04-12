@@ -4,7 +4,7 @@ import styles from './Rounds.scss';
 import { mappingToString } from '../../utils/dartUtils';
 import DartText from '../dartText/DartText';
 
-type Props = {
+export type Props = {
 	round: string[];
 };
 

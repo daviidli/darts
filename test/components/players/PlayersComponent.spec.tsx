@@ -2,7 +2,7 @@ import { spy } from 'sinon';
 import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import renderer from 'react-test-renderer';
+import toJson from 'enzyme-to-json';
 import { Button, TextField, IconButton } from '@material-ui/core';
 import PlayersComponent, {
 	Props
@@ -29,10 +29,8 @@ const setup = (props: Props = initialProps) => {
 
 describe('Players component', () => {
 	it('should match snapshot', () => {
-		const tree = renderer
-			.create(<PlayersComponent {...initialProps} />)
-			.toJSON();
-		expect(tree).toMatchSnapshot();
+		const { wrapper } = setup();
+		expect(toJson(wrapper)).toMatchSnapshot();
 	});
 
 	it('should match snapshot for 2 players', () => {
@@ -47,8 +45,8 @@ describe('Players component', () => {
 				name: 'player2'
 			}
 		];
-		const tree = renderer.create(<PlayersComponent {...props} />).toJSON();
-		expect(tree).toMatchSnapshot();
+		const { wrapper } = setup(props);
+		expect(toJson(wrapper)).toMatchSnapshot();
 	});
 
 	it('should add new player', () => {

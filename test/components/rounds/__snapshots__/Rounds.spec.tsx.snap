@@ -4,30 +4,42 @@ exports[`Rounds component should match snapshot 1`] = `
 <li>
   <span
     className="item first"
+    key="1-0"
   >
-    <span
-      className=""
-    >
-      1
-    </span>
+    <DartText
+      value={
+        Object {
+          "modifier": "",
+          "value": "1",
+        }
+      }
+    />
   </span>
   <span
     className="item"
+    key="20-t-1"
   >
-    <span
-      className="triple"
-    >
-      20
-    </span>
+    <DartText
+      value={
+        Object {
+          "modifier": "t",
+          "value": "20",
+        }
+      }
+    />
   </span>
   <span
     className="item last"
+    key="b-d-2"
   >
-    <span
-      className="double"
-    >
-      Bull
-    </span>
+    <DartText
+      value={
+        Object {
+          "modifier": "d",
+          "value": "Bull",
+        }
+      }
+    />
   </span>
 </li>
 `;

@@ -2,7 +2,7 @@ import { spy } from 'sinon';
 import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import renderer from 'react-test-renderer';
+import toJson from 'enzyme-to-json';
 import { Button } from '@material-ui/core';
 import Settings, { Props } from '../../../app/components/settings/Settings';
 import useSerialPorts from '../../../app/hooks/useSerialPorts';
@@ -61,8 +61,8 @@ const setup = (props: Props = initialProps) => {
 
 describe('Settings component', () => {
 	it('should match snapshot', () => {
-		const tree = renderer.create(<Settings {...initialProps} />).toJSON();
-		expect(tree).toMatchSnapshot();
+		const { wrapper } = setup();
+		expect(toJson(wrapper)).toMatchSnapshot();
 	});
 
 	it('should list out 1 port from hook', () => {

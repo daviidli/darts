@@ -1,52 +1,133 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Settings Slider component should match snapshot 1`] = `
-<div>
-  <p
-    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
-  >
-    Clear Darts Timeout
-  </p>
-  <div
-    className="mockSlider"
-    marks={
-      Array [
-        Object {
-          "label": "∞",
-          "value": 0,
-        },
-        Object {
-          "label": "30s",
-          "value": 30,
-        },
-        Object {
-          "label": "60s",
-          "value": 60,
-        },
-        Object {
-          "label": "90s",
-          "value": 90,
-        },
-        Object {
-          "label": "120s",
-          "value": 120,
-        },
-      ]
-    }
-    max={120}
-    min={0}
-    step={5}
-    value={0}
-  >
-    0
+<SettingsSliderComponent
+  clearDartsWaitTime={0}
+  setWaitTime={[Function]}
+>
+  <div>
+    <WithStyles(ForwardRef(Typography))
+      gutterBottom={true}
+    >
+      <ForwardRef(Typography)
+        classes={
+          Object {
+            "alignCenter": "MuiTypography-alignCenter",
+            "alignJustify": "MuiTypography-alignJustify",
+            "alignLeft": "MuiTypography-alignLeft",
+            "alignRight": "MuiTypography-alignRight",
+            "body1": "MuiTypography-body1",
+            "body2": "MuiTypography-body2",
+            "button": "MuiTypography-button",
+            "caption": "MuiTypography-caption",
+            "colorError": "MuiTypography-colorError",
+            "colorInherit": "MuiTypography-colorInherit",
+            "colorPrimary": "MuiTypography-colorPrimary",
+            "colorSecondary": "MuiTypography-colorSecondary",
+            "colorTextPrimary": "MuiTypography-colorTextPrimary",
+            "colorTextSecondary": "MuiTypography-colorTextSecondary",
+            "displayBlock": "MuiTypography-displayBlock",
+            "displayInline": "MuiTypography-displayInline",
+            "gutterBottom": "MuiTypography-gutterBottom",
+            "h1": "MuiTypography-h1",
+            "h2": "MuiTypography-h2",
+            "h3": "MuiTypography-h3",
+            "h4": "MuiTypography-h4",
+            "h5": "MuiTypography-h5",
+            "h6": "MuiTypography-h6",
+            "noWrap": "MuiTypography-noWrap",
+            "overline": "MuiTypography-overline",
+            "paragraph": "MuiTypography-paragraph",
+            "root": "MuiTypography-root",
+            "srOnly": "MuiTypography-srOnly",
+            "subtitle1": "MuiTypography-subtitle1",
+            "subtitle2": "MuiTypography-subtitle2",
+          }
+        }
+        gutterBottom={true}
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+        >
+          Clear Darts Timeout
+        </p>
+      </ForwardRef(Typography)>
+    </WithStyles(ForwardRef(Typography))>
+    <Component
+      marks={
+        Array [
+          Object {
+            "label": "∞",
+            "value": 0,
+          },
+          Object {
+            "label": "30s",
+            "value": 30,
+          },
+          Object {
+            "label": "60s",
+            "value": 60,
+          },
+          Object {
+            "label": "90s",
+            "value": 90,
+          },
+          Object {
+            "label": "120s",
+            "value": 120,
+          },
+        ]
+      }
+      max={120}
+      min={0}
+      onChange={[Function]}
+      onChangeCommitted={[Function]}
+      step={5}
+      value={0}
+      valueLabelDisplay="auto"
+    >
+      <div
+        className="mockSlider"
+        marks={
+          Array [
+            Object {
+              "label": "∞",
+              "value": 0,
+            },
+            Object {
+              "label": "30s",
+              "value": 30,
+            },
+            Object {
+              "label": "60s",
+              "value": 60,
+            },
+            Object {
+              "label": "90s",
+              "value": 90,
+            },
+            Object {
+              "label": "120s",
+              "value": 120,
+            },
+          ]
+        }
+        max={120}
+        min={0}
+        step={5}
+        value={0}
+      >
+        0
+      </div>
+      <div
+        className="mockSliderOnChange"
+        onChange={[Function]}
+      />
+      <div
+        className="mockSliderOnChangeCommitted"
+        onChange={[Function]}
+      />
+    </Component>
   </div>
-  <div
-    className="mockSliderOnChange"
-    onChange={[Function]}
-  />
-  <div
-    className="mockSliderOnChangeCommitted"
-    onChange={[Function]}
-  />
-</div>
+</SettingsSliderComponent>
 `;

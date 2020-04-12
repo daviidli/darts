@@ -2,7 +2,7 @@ import { spy } from 'sinon';
 import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import renderer from 'react-test-renderer';
+import toJson from 'enzyme-to-json';
 import Options, { optionsItems } from '../../../app/components/options/Options';
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -27,8 +27,8 @@ describe('Options component', () => {
 				onClick: () => {}
 			}
 		];
-		const tree = renderer.create(<Options items={items} />).toJSON();
-		expect(tree).toMatchSnapshot();
+		const { wrapper } = setup(items);
+		expect(toJson(wrapper)).toMatchSnapshot();
 	});
 
 	it('should have 1 button', () => {

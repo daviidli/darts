@@ -1,322 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Players component should match snapshot 1`] = `
-Array [
-  <ul
-    className="MuiList-root MuiList-padding"
-  >
-    <li
-      className="MuiListItem-container"
+<Fragment>
+  <WithStyles(ForwardRef(List))>
+    <WithStyles(ForwardRef(ListItem))
+      key="player-1"
     >
-      <div
-        className="MuiListItem-root MuiListItem-gutters MuiListItem-secondaryAction"
-        disabled={false}
-      >
-        <div
-          className="MuiFormControl-root MuiTextField-root"
-        >
-          <label
-            className="MuiFormLabel-root MuiFormLabel-colorSecondary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
-            data-shrink={true}
-          >
-            Player 1
-          </label>
-          <div
-            className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorSecondary MuiInput-colorSecondary MuiInputBase-formControl MuiInput-formControl"
-            onClick={[Function]}
-          >
-            <input
-              aria-invalid={false}
-              autoFocus={false}
-              className="MuiInputBase-input MuiInput-input"
-              disabled={false}
-              onAnimationStart={[Function]}
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              required={false}
-              type="text"
-              value="player1"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        className="MuiListItemSecondaryAction-root"
-      >
-        <button
-          className="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd"
-          disabled={false}
-          onBlur={[Function]}
+      <WithStyles(ForwardRef(TextField))
+        color="secondary"
+        label="Player 1"
+        onChange={[Function]}
+        value="player1"
+      />
+      <WithStyles(ForwardRef(ListItemSecondaryAction))>
+        <WithStyles(ForwardRef(IconButton))
+          edge="end"
           onClick={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={0}
-          type="button"
         >
-          <span
-            className="MuiIconButton-label"
-          >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-    </li>
-  </ul>,
-  <button
-    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary"
-    disabled={false}
-    onBlur={[Function]}
+          <MdDelete />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(ListItemSecondaryAction))>
+    </WithStyles(ForwardRef(ListItem))>
+  </WithStyles(ForwardRef(List))>
+  <WithStyles(ForwardRef(Button))
+    color="secondary"
     onClick={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    tabIndex={0}
-    type="button"
+    variant="contained"
   >
-    <span
-      className="MuiButton-label"
-    >
-      Add Player
-    </span>
-  </button>,
-]
+    Add Player
+  </WithStyles(ForwardRef(Button))>
+</Fragment>
 `;
 
 exports[`Players component should match snapshot for 2 players 1`] = `
-Array [
-  <ul
-    className="MuiList-root MuiList-padding"
-  >
-    <li
-      className="MuiListItem-container"
+<Fragment>
+  <WithStyles(ForwardRef(List))>
+    <WithStyles(ForwardRef(ListItem))
+      key="player-1"
     >
-      <div
-        className="MuiListItem-root MuiListItem-gutters MuiListItem-secondaryAction"
-        disabled={false}
-      >
-        <div
-          className="MuiFormControl-root MuiTextField-root"
-        >
-          <label
-            className="MuiFormLabel-root MuiFormLabel-colorSecondary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-            data-shrink={false}
-          >
-            Player 1
-          </label>
-          <div
-            className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorSecondary MuiInput-colorSecondary MuiInputBase-formControl MuiInput-formControl"
-            onClick={[Function]}
-          >
-            <input
-              aria-invalid={false}
-              autoFocus={false}
-              className="MuiInputBase-input MuiInput-input"
-              disabled={false}
-              onAnimationStart={[Function]}
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              required={false}
-              type="text"
-              value="player1"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        className="MuiListItemSecondaryAction-root"
-      >
-        <button
-          className="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd"
-          disabled={false}
-          onBlur={[Function]}
+      <WithStyles(ForwardRef(TextField))
+        color="secondary"
+        label="Player 1"
+        onChange={[Function]}
+        value="player1"
+      />
+      <WithStyles(ForwardRef(ListItemSecondaryAction))>
+        <WithStyles(ForwardRef(IconButton))
+          edge="end"
           onClick={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={0}
-          type="button"
         >
-          <span
-            className="MuiIconButton-label"
-          >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-              />
-            </svg>
-          </span>
-          <span
-            className="MuiTouchRipple-root"
-          />
-        </button>
-      </div>
-    </li>
-    <li
-      className="MuiListItem-container"
+          <MdDelete />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(ListItemSecondaryAction))>
+    </WithStyles(ForwardRef(ListItem))>
+    <WithStyles(ForwardRef(ListItem))
+      key="player-2"
     >
-      <div
-        className="MuiListItem-root MuiListItem-gutters MuiListItem-secondaryAction"
-        disabled={false}
-      >
-        <div
-          className="MuiFormControl-root MuiTextField-root"
-        >
-          <label
-            className="MuiFormLabel-root MuiFormLabel-colorSecondary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-            data-shrink={false}
-          >
-            Player 2
-          </label>
-          <div
-            className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorSecondary MuiInput-colorSecondary MuiInputBase-formControl MuiInput-formControl"
-            onClick={[Function]}
-          >
-            <input
-              aria-invalid={false}
-              autoFocus={false}
-              className="MuiInputBase-input MuiInput-input"
-              disabled={false}
-              onAnimationStart={[Function]}
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              required={false}
-              type="text"
-              value="player2"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        className="MuiListItemSecondaryAction-root"
-      >
-        <button
-          className="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd"
-          disabled={false}
-          onBlur={[Function]}
+      <WithStyles(ForwardRef(TextField))
+        color="secondary"
+        label="Player 2"
+        onChange={[Function]}
+        value="player2"
+      />
+      <WithStyles(ForwardRef(ListItemSecondaryAction))>
+        <WithStyles(ForwardRef(IconButton))
+          edge="end"
           onClick={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={0}
-          type="button"
         >
-          <span
-            className="MuiIconButton-label"
-          >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-              />
-            </svg>
-          </span>
-          <span
-            className="MuiTouchRipple-root"
-          />
-        </button>
-      </div>
-    </li>
-  </ul>,
-  <button
-    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary"
-    disabled={false}
-    onBlur={[Function]}
+          <MdDelete />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(ListItemSecondaryAction))>
+    </WithStyles(ForwardRef(ListItem))>
+  </WithStyles(ForwardRef(List))>
+  <WithStyles(ForwardRef(Button))
+    color="secondary"
     onClick={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    tabIndex={0}
-    type="button"
+    variant="contained"
   >
-    <span
-      className="MuiButton-label"
-    >
-      Add Player
-    </span>
-    <span
-      className="MuiTouchRipple-root"
-    />
-  </button>,
-]
+    Add Player
+  </WithStyles(ForwardRef(Button))>
+</Fragment>
 `;

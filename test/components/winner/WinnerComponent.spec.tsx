@@ -2,7 +2,7 @@ import { spy } from 'sinon';
 import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import renderer from 'react-test-renderer';
+import toJson from 'enzyme-to-json';
 import WinnerComponent, {
 	Props
 } from '../../../app/components/winner/WinnerComponent';
@@ -33,11 +33,9 @@ const setup = (props: Props = initialProps) => {
 };
 
 describe('Winner component', () => {
-	it('should match the snapshot', () => {
-		const tree = renderer
-			.create(<WinnerComponent {...initialProps} />)
-			.toJSON();
-		expect(tree).toMatchSnapshot();
+	it('should match snapshot', () => {
+		const { wrapper } = setup();
+		expect(toJson(wrapper)).toMatchSnapshot();
 	});
 
 	it('should show correct player name', () => {

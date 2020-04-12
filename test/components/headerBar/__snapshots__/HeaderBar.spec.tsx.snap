@@ -1,35 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Options component should match snapshot 1`] = `
+exports[`HeaderBar component should match snapshot 1`] = `
 <WithStyles(ForwardRef(Grid))
-  className="options"
+  alignItems="center"
+  className="header"
   container={true}
-  justify="center"
+  direction="row"
+  justify="space-around"
 >
   <WithStyles(ForwardRef(Grid))
     item={true}
-    key="op1"
+    xs={true}
   >
     <WithStyles(ForwardRef(Button))
-      className="button"
-      color="primary"
       onClick={[Function]}
-      variant="contained"
+      variant="outlined"
     >
-      op1
+      End Game
     </WithStyles(ForwardRef(Button))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
+    container={true}
     item={true}
-    key="op2"
+    justify="flex-end"
+    xs={true}
   >
     <WithStyles(ForwardRef(Button))
-      className="button"
-      color="primary"
+      color="secondary"
       onClick={[Function]}
       variant="contained"
     >
-      op2
+      Miss
     </WithStyles(ForwardRef(Button))>
   </WithStyles(ForwardRef(Grid))>
 </WithStyles(ForwardRef(Grid))>

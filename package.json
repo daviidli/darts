@@ -158,7 +158,8 @@
     ],
     "setupFiles": [
       "./internals/scripts/CheckBuildsExist.js"
-    ]
+	],
+	"snapshotSerializers": ["enzyme-to-json/serializer"]
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

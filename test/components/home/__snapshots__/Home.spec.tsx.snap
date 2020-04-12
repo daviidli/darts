@@ -1,81 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home component should match the snapshot 1`] = `
-<div
-  className="MuiGrid-root home MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-direction-xs-column MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+exports[`Home component should match snapshot 1`] = `
+<WithStyles(ForwardRef(Grid))
+  alignItems="center"
+  className="home"
+  container={true}
+  direction="column"
+  justify="center"
+  spacing={3}
 >
-  <div
-    className="MuiGrid-root MuiGrid-item"
+  <WithStyles(ForwardRef(Grid))
+    item={true}
   >
-    <h2
-      className="MuiTypography-root title MuiTypography-h2"
+    <WithStyles(ForwardRef(Typography))
+      className="title"
+      variant="h2"
     >
       Darts
-    </h2>
-  </div>
-  <div
-    className="MuiGrid-root MuiGrid-item"
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
   >
-    <div
-      className="MuiGrid-root options MuiGrid-container MuiGrid-justify-xs-center"
-    >
-      <div
-        className="MuiGrid-root MuiGrid-item"
-      >
-        <button
-          className="MuiButtonBase-root MuiButton-root MuiButton-contained button MuiButton-containedPrimary"
-          disabled={false}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={0}
-          type="button"
-        >
-          <span
-            className="MuiButton-label"
-          >
-            01's
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div
-    className="MuiGrid-root MuiGrid-item"
+    <Options
+      items={
+        Array [
+          Object {
+            "label": "01's",
+            "onClick": [Function],
+          },
+        ]
+      }
+    />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
   >
-    <button
-      className="MuiButtonBase-root MuiButton-root MuiButton-contained button MuiButton-containedSecondary MuiButton-disableElevation"
-      disabled={false}
-      onBlur={[Function]}
+    <WithStyles(ForwardRef(Button))
+      className="button"
+      color="secondary"
+      disableElevation={true}
       onClick={[Function]}
-      onDragLeave={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      tabIndex={0}
-      type="button"
+      variant="contained"
     >
-      <span
-        className="MuiButton-label"
-      >
-        Settings
-      </span>
-    </button>
-  </div>
-</div>
+      Settings
+    </WithStyles(ForwardRef(Button))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
 `;

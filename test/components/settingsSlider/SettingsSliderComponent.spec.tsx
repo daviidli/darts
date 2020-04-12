@@ -2,7 +2,7 @@ import { spy } from 'sinon';
 import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import renderer from 'react-test-renderer';
+import toJson from 'enzyme-to-json';
 import SettingsSliderComponent, {
 	Props
 } from '../../../app/components/settingsSlider/SettingsSliderComponent';
@@ -49,10 +49,8 @@ const setup = (props: Props = initialProps) => {
 
 describe('Settings Slider component', () => {
 	it('should match snapshot', () => {
-		const tree = renderer
-			.create(<SettingsSliderComponent {...initialProps} />)
-			.toJSON();
-		expect(tree).toMatchSnapshot();
+		const { wrapper } = setup();
+		expect(toJson(wrapper)).toMatchSnapshot();
 	});
 
 	it('should have correct initial value', () => {
