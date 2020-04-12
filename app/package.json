@@ -14,5 +14,13 @@
     "postinstall": "yarn electron-rebuild"
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "clsx": "^1.1.0",
+    "rfdc": "^1.1.4",
+    "uuid": "^7.0.3"
+  },
+  "devDependencies": {
+    "@types/rfdc": "^1.1.0",
+    "@types/uuid": "^7.0.2"
+  }
 }

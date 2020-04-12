@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderBar component should match snapshot 1`] = `
+<WithStyles(ForwardRef(Grid))
+  alignItems="center"
+  className="header"
+  container={true}
+  direction="row"
+  justify="space-around"
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={true}
+  >
+    <WithStyles(ForwardRef(Button))
+      onClick={[Function]}
+      variant="outlined"
+    >
+      End Game
+    </WithStyles(ForwardRef(Button))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    item={true}
+    justify="flex-end"
+    xs={true}
+  >
+    <WithStyles(ForwardRef(Button))
+      color="secondary"
+      onClick={[Function]}
+      variant="contained"
+    >
+      Miss
+    </WithStyles(ForwardRef(Button))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;

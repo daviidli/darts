@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlayersPanel component should match snapshot 1`] = `
+<WithStyles(ForwardRef(Grid))
+  alignItems="center"
+  className="players"
+  container={true}
+  direction="row"
+  justify="center"
+>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    className="player active"
+    container={true}
+    direction="column"
+    item={true}
+    justify="center"
+    key="1"
+    xs={true}
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+    >
+      <WithStyles(ForwardRef(Typography))
+        className="playerTotal"
+        variant="h2"
+      >
+        0
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+    >
+      player1
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`PlayersPanel component should match snapshot with 2 players 1`] = `
+<WithStyles(ForwardRef(Grid))
+  alignItems="center"
+  className="players"
+  container={true}
+  direction="row"
+  justify="center"
+>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    className="player"
+    container={true}
+    direction="column"
+    item={true}
+    justify="center"
+    key="1"
+    xs={true}
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+    >
+      <WithStyles(ForwardRef(Typography))
+        className="playerTotal"
+        variant="h2"
+      >
+        100
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+    >
+      player1
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    className="player active"
+    container={true}
+    direction="column"
+    item={true}
+    justify="center"
+    key="2"
+    xs={true}
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+    >
+      <WithStyles(ForwardRef(Typography))
+        className="playerTotal"
+        variant="h2"
+      >
+        200
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+    >
+      player2
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;

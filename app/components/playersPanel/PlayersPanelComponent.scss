@@ -1,0 +1,19 @@
+.players {
+	height: 15vh;
+	text-align: center;
+
+	.player {
+		background-color: rgba(0, 0, 0, 0.4);
+		height: 100%;
+		margin: 0 1em;
+		max-width: 25em;
+
+		&.active {
+			background-color: rgba(249, 198, 96, 0.4);
+		}
+	}
+
+	.playerTotal {
+		font-weight: 700;
+	}
+}

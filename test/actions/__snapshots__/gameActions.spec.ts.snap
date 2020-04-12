@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions should create addPlayer action 1`] = `
+Object {
+  "player": "player1",
+  "type": "ADD_PLAYER",
+}
+`;
+
+exports[`actions should create changePlayer action 1`] = `
+Object {
+  "index": 0,
+  "player": "unicorn",
+  "type": "CHANGE_PLAYER",
+}
+`;
+
+exports[`actions should create initializedRound action 1`] = `
+Object {
+  "rounds": Array [
+    Array [
+      Array [
+        "",
+      ],
+    ],
+  ],
+  "type": "INITIALIZE_ROUNDS",
+}
+`;
+
+exports[`actions should create removePlayer action 1`] = `
+Object {
+  "index": 0,
+  "type": "REMOVE_PLAYER",
+}
+`;
+
+exports[`actions should create setCurrentDart action 1`] = `
+Object {
+  "index": 1,
+  "type": "SET_CURRENT_DART",
+}
+`;
+
+exports[`actions should create setCurrentPlayer action 1`] = `
+Object {
+  "index": 1,
+  "type": "SET_CURRENT_PLAYER",
+}
+`;
+
+exports[`actions should create setCurrentRound action 1`] = `
+Object {
+  "index": 0,
+  "type": "SET_CURRENT_ROUND",
+}
+`;
+
+exports[`actions should create setMaxDarts action 1`] = `
+Object {
+  "max": 3,
+  "type": "SET_MAX_DARTS",
+}
+`;
+
+exports[`actions should create setMaxRounds action 1`] = `
+Object {
+  "max": 12,
+  "type": "SET_MAX_ROUNDS",
+}
+`;
+
+exports[`actions should create setPlayers action 1`] = `
+Object {
+  "players": Array [
+    Object {
+      "id": "1",
+      "name": "player1",
+    },
+    Object {
+      "id": "2",
+      "name": "player2",
+    },
+  ],
+  "type": "SET_PLAYERS",
+}
+`;
+
+exports[`actions should create setRound action 1`] = `
+Object {
+  "dart": 0,
+  "player": 0,
+  "round": 0,
+  "roundValue": "20-t",
+  "type": "SET_ROUND",
+}
+`;
+
+exports[`actions should create setTotals action 1`] = `
+Object {
+  "totals": Array [
+    301,
+  ],
+  "type": "SET_TOTALS",
+}
+`;
+
+exports[`actions should create setWaiting action 1`] = `
+Object {
+  "type": "SET_WAITING",
+  "waiting": true,
+}
+`;
+
+exports[`actions should create setWinner action 1`] = `
+Object {
+  "type": "SET_WINNER",
+  "winner": 0,
+}
+`;

@@ -1,0 +1,25 @@
+.container {
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.message {
+		font-size: 4em;
+		text-align: center;
+	}
+
+	.name {
+		font-size: 8em;
+		font-weight: 900;
+		text-shadow: 0.06em 0.06em #e49708;
+		text-align: center;
+	}
+
+	.button {
+		margin-top: 5em;
+	}
+}

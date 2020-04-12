@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rounds component should match snapshot 1`] = `
+<li>
+  <span
+    className="item first"
+    key="1-0"
+  >
+    <DartText
+      value={
+        Object {
+          "modifier": "",
+          "value": "1",
+        }
+      }
+    />
+  </span>
+  <span
+    className="item"
+    key="20-t-1"
+  >
+    <DartText
+      value={
+        Object {
+          "modifier": "t",
+          "value": "20",
+        }
+      }
+    />
+  </span>
+  <span
+    className="item last"
+    key="b-d-2"
+  >
+    <DartText
+      value={
+        Object {
+          "modifier": "d",
+          "value": "Bull",
+        }
+      }
+    />
+  </span>
+</li>
+`;

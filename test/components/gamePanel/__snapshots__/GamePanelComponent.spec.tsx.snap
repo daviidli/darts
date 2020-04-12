@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GamePanel component should match snapshot 1`] = `
+<Panel
+  gameManager={
+    Object {
+      "getRunning": [Function],
+    }
+  }
+/>
+`;
+
+exports[`GamePanel component should match snapshot when gameManager is not running 1`] = `
+<div>
+  starting up
+</div>
+`;
+
+exports[`GamePanel component should match snapshot when waiting = true 1`] = `
+<ClearDarts
+  gameManager={
+    Object {
+      "getRunning": [Function],
+    }
+  }
+  waiting={true}
+/>
+`;
+
+exports[`GamePanel component should match snapshot when winner != -1 1`] = `<Connect(WinnerComponent) />`;

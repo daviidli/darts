@@ -1,4 +1,6 @@
 {
-  "HOME": "/",
-  "COUNTER": "/counter"
+	"HOME": "/",
+	"OONE": "/oOne",
+	"START": "/start",
+	"SETTINGS": "/settings"
 }

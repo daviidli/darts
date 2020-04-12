@@ -1,0 +1,16 @@
+.clearDartsPanel {
+	height: 100%;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	visibility: hidden;
+	margin: 0 !important;
+
+	&.visible {
+		visibility: visible;
+	}
+
+	.clearDarts {
+		font-weight: 500;
+	}
+}
