@@ -2,9 +2,9 @@ import { spy, stub } from 'sinon';
 import React from 'react';
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import SerialPort from 'serialport';
 import renderer from 'react-test-renderer';
 import Home, { Props } from '../../../app/components/home/Home';
+import useSerialPorts from '../../../app/hooks/useSerialPorts';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -14,6 +14,11 @@ jest.mock('react-router-dom', () => ({
 	useHistory: () => ({
 		push: mockPush
 	})
+}));
+
+jest.mock('../../../app/hooks/useSerialPorts', () => ({
+	__esModule: true,
+	default: jest.fn().mockImplementation(() => [])
 }));
 
 const initialProps: Props = {
@@ -70,11 +75,25 @@ describe('Home component', () => {
 		});
 	});
 
+	it('should not select any ports as one is already selected', () => {
+		const setSerialPortMock = spy();
+		const props = { ...initialProps };
+		props.setSerialPort = setSerialPortMock;
+
+		setupMount(props);
+
+		return new Promise(resolve => {
+			setImmediate(() => {
+				expect(setSerialPortMock.callCount).toBe(0);
+				resolve();
+			});
+		});
+	});
+
 	it('should select the first available serial port', () => {
-		const path = 'port123';
-		stub(SerialPort, 'list').returns(
-			Promise.resolve([{ path, productId: '123' }])
-		);
+		const sp = useSerialPorts as jest.Mock;
+		sp.mockImplementation(() => [{ path: 'port1', serialNumber: '1' }]);
+
 		const setSerialPort = spy();
 		const props: Props = {
 			serialPort: '',
@@ -86,22 +105,7 @@ describe('Home component', () => {
 		return new Promise(resolve => {
 			setImmediate(() => {
 				expect(setSerialPort.callCount).toBe(1);
-				expect(setSerialPort.calledWith(path)).toBeTruthy();
-				resolve();
-			});
-		});
-	});
-
-	it('should not select any ports as one is already selected', () => {
-		const setSerialPortMock = spy();
-		const props = { ...initialProps };
-		props.setSerialPort = setSerialPortMock;
-
-		setupMount(props);
-
-		return new Promise(resolve => {
-			setImmediate(() => {
-				expect(setSerialPortMock.callCount).toBe(0);
+				expect(setSerialPort.calledWith('port1')).toBeTruthy();
 				resolve();
 			});
 		});
