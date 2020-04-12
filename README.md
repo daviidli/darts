@@ -1,16 +1,15 @@
 # Darts
 
-## About
-
 This is Electron app that communicates with an Arduino attached to a dart board to play different dart games.
 
 I got the inspiration from this tutorial on OpenDarts ([OpenDarts - Homemade Dartboard Machine](https://www.hackster.io/ricardo-alves/opendarts-homemade-dartboard-machine-2a2914)), but unfortunately OpenDarts is for Windows only.
 
 This project is built using the [Electron-React-Boilerplate](https://github.com/electron-react-boilerplate/electron-react-boilerplate) and is still under development. It is written in Typescript and uses React for frontend and Redux for state management. Communication with the Arduino is done using the [SerialPort](https://serialport.io/) package.
 
-## Current [Game Modes](https://www.8dartfinish.com/21-popular-darts-games-play-dartboard/)
+## Current Game Modes
 
 -   X01
+-   [Possible others](https://www.8dartfinish.com/21-popular-darts-games-play-dartboard/)
 
 ## Setup and Usage
 
@@ -40,7 +39,7 @@ Package app for local platform
 
 More info can be found in [Electron-React-Boilerplate](https://electron-react-boilerplate.js.org/)'s docs.
 
-## GameManager API
+### GameManager API
 
 [GameManager.ts](app/utils/GameManager.ts)
 
@@ -48,35 +47,40 @@ Game mode specific files are in [app/gameModes/](app/gameModes/). To write a new
 
 Example for X01 game mode: [OOneGameManager.ts](app/gameModes/oOneGame/OOneGameManager.ts)
 
-### Methods to implement
+#### Methods to implement
 
 ```typescript
 	/**
 	 * Perform any necessary initializations for the game mode
-	 * Then call this.superStart()
 	 */
-	public abstract start(): void;
+	protected abstract initialize(): void;
 
 	/**
 	 * This function will be called each turn
 	 */
-	public abstract async turn(): Promise<void>;
+	protected abstract async turn(): Promise<void>;
 ```
 
-### Helper methods
+#### Helper methods
 
 ```typescript
 	/**
 	 * To be called by start()
 	 * Increments the Redux store to correspond with the current player and round
 	 */
-	protected async superStart(): void;
+	protected async run(): void;
 
 	/**
 	 * On resolve, will return the dart value
 	 * If miss() was called while waiting for dart, "miss" will be returned
 	 */
 	protected async getDart(): Promise<string>;
+
+	/**
+	 * Starts the game.
+	 * Calls initialize and run
+	 */
+	public start(): void;
 
 	/**
 	 * Stops the game and resets Redux store to default values
@@ -106,23 +110,23 @@ Example for X01 game mode: [OOneGameManager.ts](app/gameModes/oOneGame/OOneGameM
 	public clearedDarts(): void;
 ```
 
-## Redux Store
+### Redux Store
 
 [types.ts](app/reducers/types.ts)
 
 ```typescript
 export type stateType = {
-	serialPort: string;				// serial port of the Arduino
-	clearDartsWaitTime: number;		// how long the clear darts screen is shown for
-	players: playerType[];			// list of players
-	maxDarts: number;				// max number of throws for each player per round
-	maxRounds: number;				// max number of rounds per player
-	currentPlayer: number;			// index of current player
-	currentDart: number;			// index of current throw
-	currentRound: number;			// index of current round
-	rounds: string[][][];			// store of all throws in game
-	totals: any[];					// used as additional store for game modes
-	winner: number;					// index of winning player
-	waiting: boolean;				// flag whether to show clear darts screen
+	serialPort: string; // serial port of the Arduino
+	clearDartsWaitTime: number; // how long the clear darts screen is shown for
+	players: playerType[]; // list of players
+	maxDarts: number; // max number of throws for each player per round
+	maxRounds: number; // max number of rounds per player
+	currentPlayer: number; // index of current player
+	currentDart: number; // index of current throw
+	currentRound: number; // index of current round
+	rounds: string[][][]; // store of all throws in game
+	totals: any[]; // used as additional store for game modes
+	winner: number; // index of winning player
+	waiting: boolean; // flag whether to show clear darts screen
 };
 ```
